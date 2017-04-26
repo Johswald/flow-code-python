@@ -56,10 +56,8 @@ k = cv2.waitKey()
 # color encoding scheme for optical flow
 img = computeColor.computeColor(u/range_f/math.sqrt(2), v/range_f/math.sqrt(2));
 
-img[s2,:,:] = 0
-img[:,s2,:] = 0
-
 cv2.imshow('optical flow color encoding scheme',img)
+cv2.imwrite('colorTest.png', img)
 k = cv2.waitKey()
 
 
