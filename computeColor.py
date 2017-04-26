@@ -150,8 +150,16 @@ if __name__ == '__main__':
 	  default='colorTest.flo',
 	  help='Flow file'
 	)
+	parser.add_argument(
+	  '--write',
+	  type=bool,
+	  default=False,
+	  help='write flow as png'
+	)
 	file = parser.parse_args().flowfile
 	flow = readFlowFile.read(file)
 	img = computeImg(flow)	
 	cv2.imshow('Flow Image',img)
 	k = cv2.waitKey()
+	if parser.parse_args().write:
+		cv2.imwrite(file[:-4]+'.png', img)
