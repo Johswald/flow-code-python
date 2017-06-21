@@ -159,7 +159,7 @@ if __name__ == '__main__':
 	file = parser.parse_args().flowfile
 	flow = readFlowFile.read(file)
 	img = computeImg(flow)	
-	cv2.imshow(file,img)
+	cv2.imshow(file, img)
 	k = cv2.waitKey()
 	if parser.parse_args().write:
 		cv2.imwrite(file[:-4]+'.png', img)

@@ -25,7 +25,7 @@ def read(file):
 	assert flo_number == TAG_FLOAT, 'Flow number %r incorrect. Invalid .flo file' % flo_number
 	w = np.fromfile(f, np.int32, count=1)
 	h = np.fromfile(f, np.int32, count=1)
-	data = np.fromfile(f, np.float32, count=2*w*h)
+	data = np.fromfile(f, np.float32, count=2*w[0]*h[0])
 	# Reshape data into 3D array (columns, rows, bands)
 	flow = np.resize(data, (int(h), int(w), 2))	
 	f.close()
