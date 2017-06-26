@@ -4,7 +4,9 @@ Compute color coding for given .flo file according to the matlab code of Deqing 
 Contact: dqsun@cs.brown.edu
 Contact: schar@middlebury.edu
 
-# Example
+For more details, datasets, etc. check: http://vision.middlebury.edu/flow/ 
 
+# Example
+Generates the color code:
 python computeColor.py --flowfile colorTest.flo --write True
 
